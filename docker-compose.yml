@@ -1,0 +1,12 @@
+version: '3'
+services:
+  db:
+    image: mysql:latest
+    restart: always
+    environment:
+      MYSQL_PASSWORD: root
+      MYSQL_DATABASE: startingWithSequelize
+    ports:
+      - 5555:3306
+    volumes:
+      - ./:/docker-entrypoint-initdb.d
