@@ -15,6 +15,7 @@ module.exports = {
         allowNull: false,
       },
       owner: {
+        type: Sequelize.INTEGER,
         foreignKey: true,
         references: {
           model: 'names', key: 'id',
