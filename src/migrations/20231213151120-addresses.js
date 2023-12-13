@@ -18,7 +18,9 @@ module.exports = {
         foreignKey: true,
         references: {
           model: 'names', key: 'id',
-        }
+        },
+        onUpdate: 'CASCADE',
+        onDelete: 'CASCADE',
       },
       city: {
         allowNull: false,
