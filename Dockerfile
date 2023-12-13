@@ -1,11 +1,11 @@
 # next line defines what kind of image I want
-FROM alpine
+FROM node:18-alpine
 # then we set our working directory as /app
 WORKDIR /app
 # it copies all .jsons to our image
 COPY package*.json ./ 
 # it runs a command that installs our dependencies into our image
-RUN ["npm", "install"]
+RUN npm run clean-install
 # it copies our files into our image
 COPY . .
 # just an exposure to the preferred port
