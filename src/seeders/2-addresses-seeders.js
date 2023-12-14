@@ -12,12 +12,18 @@ module.exports = {
      *   isBetaMember: false
      * }], {});
     */
-   await queryInterface.bulkInsert('names', [{
-    name: 'Johnny',
-    lastName: 'Bravo',
+   await queryInterface.bulkInsert('addresses', [{
+    number: 17,
+    owner: 1,
+    city: 'Maceió',
+    state: 'Alagoas',
+    country: 'Brazil',
    }, {
-    name: 'Dexter',
-    lastName: 'Nossurname',
+    number: 18,
+    owner: 2,
+    city: 'Los Angeles',
+    state: 'California',
+    country: 'USA',
    }])
   },
 
@@ -27,6 +33,6 @@ module.exports = {
      *
      * Example:
     */
-    await queryInterface.bulkDelete('names', null, {});
+    await queryInterface.bulkDelete('addresses', null, {});
   }
 };

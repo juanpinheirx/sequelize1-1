@@ -1,6 +1,7 @@
-const route = require('express').Router();
+const express = require('express');
+const route = express.Router();
 const { namesController } = require('../controller');
 
-route.post('/', namesController.getAll);
+route.get('/', namesController.getAll);
 
 module.exports = route;

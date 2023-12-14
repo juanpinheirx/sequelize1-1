@@ -14,7 +14,6 @@ module.exports = {
         type: Sequelize.INTEGER,
         allowNull: false,
         autoIncrement: true,
-        unique: true,
         primaryKey: true,
       },
       name: {

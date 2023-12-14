@@ -23,10 +23,8 @@ module.exports = (sequelize, DataTypes) => {
 
   Names.associate = (models) => {
     Names.hasOne(models.Address, {
-      foreignKey: 'owner',
-      as: 'names',
+      foreignKey: 'owner', as: 'addresses'
     });
-
-    return Names;
   };
+  return Names;
 };
