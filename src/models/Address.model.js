@@ -26,5 +26,12 @@ module.exports = (sequelize, DataTypes) => {
     tableName: 'addresses',
     underscored: true,
   })
+
+  Address.associate = (models) => {
+     Address.belongsTo(models.Names, {
+      foreignKey: 'owner', as: 'names'
+     })
+  }
+
   return Address;
 }
